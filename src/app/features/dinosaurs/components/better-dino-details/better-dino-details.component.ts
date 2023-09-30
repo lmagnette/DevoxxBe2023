@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { Dinosaur } from '../../models/dinosaur';
@@ -13,13 +13,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BetterDinoDetailsComponent implements OnInit{
 
+  @Input()
   dino!:Dinosaur;
 
-  constructor( private activatedRoute: ActivatedRoute ) {
+  constructor() {
 
   }
 
   ngOnInit(): void {
-    this.dino = this.activatedRoute.snapshot.data['dino'];
   }
 }

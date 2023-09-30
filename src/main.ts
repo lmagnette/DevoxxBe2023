@@ -1,7 +1,7 @@
 
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, Routes } from '@angular/router';
+import { provideRouter, Routes, withComponentInputBinding } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
 
@@ -12,7 +12,7 @@ const routes: Routes = [
 
 bootstrapApplication(AppComponent,{
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(),
     provideNoopAnimations()
     ]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, numberAttribute, OnInit } from '@angular/core';
 import { DinoService } from '../../services/dino.service';
 import { RouterLink } from '@angular/router';
 import { Dinosaur } from '../../models/dinosaur';
@@ -27,7 +27,7 @@ import { routeParam } from '../../dinosaurs-routes';
 })
 export class DinoDetailsComponent implements OnInit {
 
-  id:number = routeParam('id');
+  @Input({transform:numberAttribute}) id!:number;
   dino!:Dinosaur
 
   constructor( private dinoService: DinoService) {
