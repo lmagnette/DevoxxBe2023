@@ -31,4 +31,8 @@ export class DinoCardComponent {
   constructor(private snackBar: MatSnackBar) {
 
   }
+
+  like( event: MouseEvent ) {
+    event.stopPropagation();
+  }
 }

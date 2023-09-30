@@ -1,15 +1,20 @@
-:host{
-  display:flex;
-  flex-direction:column;
+:host {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items:center;
+  align-items: center;
   justify-content: center;
 }
-.search{
-  color:#FFF;
+
+.search {
+  color: #FFF;
   width: 90%;
   justify-content: center;
   display: flex;
+
+  .mat-mdc-card-content {
+    padding-bottom: 0 !important;
+  }
 }
 
 .example-form {
@@ -21,14 +26,16 @@
 .example-full-width {
   width: 100%;
 }
-.list{
-  display:flex;
-  flex-direction:row;
+
+.list {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items:center;
+  align-items: center;
   justify-content: center;
 }
-.column{
+
+.column {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
