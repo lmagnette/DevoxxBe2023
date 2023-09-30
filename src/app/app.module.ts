@@ -7,10 +7,8 @@ import { NavbarComponent } from './features/navigation/navbar/navbar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule( {
-  declarations: [
-    AppComponent
-  ],
   imports: [
+    AppComponent,
     BrowserModule,
     AppRoutingModule,
     NavbarComponent,
