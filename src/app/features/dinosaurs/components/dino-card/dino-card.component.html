@@ -1,16 +1,13 @@
-<mat-card>
+<mat-card [routerLink]="''+dino.id">
   <mat-card-header>
     <mat-card-title>{{dino.name}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [ngSrc]="dino.image" [height]="200" [width]="250" [alt]="'Photo of '+dino.name">
+  <img mat-card-image [ngSrc]="dino.image" [height]="300" [width]="300" [alt]="'Photo of '+dino.name">
   <mat-card-content>
     <p style="text-decoration: underline">Description:</p>
     <p>{{dino.description}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <a [routerLink]="''+dino.id" mat-icon-button color="accent" aria-label="Go to the details for this dinosaur">
-      <mat-icon>search</mat-icon>
-    </a>
     <button mat-icon-button color="warn" aria-label="like this dinosaur"  >
       <mat-icon [matBadge]="0">favorite</mat-icon>
     </button>
