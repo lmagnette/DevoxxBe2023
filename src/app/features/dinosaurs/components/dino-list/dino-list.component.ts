@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnInit } from '@angular/core';
+import { Component, computed, DestroyRef, OnInit, signal } from '@angular/core';
 import { DinoService } from '../../services/dino.service';
 import { DinoCardComponent } from '../dino-card/dino-card.component';
 import { AsyncPipe, NgForOf } from '@angular/common';
@@ -30,6 +30,12 @@ export class DinoListComponent implements OnInit{
 
   dinoList:Dinosaur[]= [];
 
+  searchTerm = signal<string>('');
+
+  filteredDinos = computed<Dinosaur[]>( () => this.dinoList.filter( dino =>
+    dino.name.toLowerCase().includes( this.searchTerm().toLowerCase() )
+  ));
+
   constructor( private dinoService: DinoService, private destroyRef:DestroyRef) {
   }
 
@@ -38,5 +44,9 @@ export class DinoListComponent implements OnInit{
     this.dinoService.list()
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe( dinos => this.dinoList = dinos || [] );
+  }
+
+  updateTerm( search: string ) {
+    this.searchTerm.set( search);
   }
 }
