@@ -9,7 +9,7 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-icon-button color="warn" aria-label="like this dinosaur"  (click)="like($event)">
-      <mat-icon [matBadge]="0">favorite</mat-icon>
+      <mat-icon [matBadge]="likeCount()">favorite</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>

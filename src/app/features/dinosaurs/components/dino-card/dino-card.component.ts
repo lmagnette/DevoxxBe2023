@@ -27,12 +27,16 @@ export class DinoCardComponent {
 
   @Input({required:true}) dino!: Dinosaur;
 
+  likeCount = signal<number>(0)
+
 
   constructor(private snackBar: MatSnackBar) {
+    effect( () => this.snackBar.open(`${this.dino.name} was liked ${this.likeCount()} times!`, 'Dismiss', { duration: 3000 }) );
 
   }
 
   like( event: MouseEvent ) {
     event.stopPropagation();
+    this.likeCount.update( count => count + 1 );
   }
 }
