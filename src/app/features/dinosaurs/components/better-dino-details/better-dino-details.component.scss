@@ -1,0 +1,36 @@
+mat-card{
+  color: #FFF;
+  margin: 10px;
+  mat-card-content{
+    border-top: 1px solid #303030;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  mat-card-title{
+    text-align: center;
+    margin:16px;
+    h2{
+      margin: 0;
+    }
+  }
+}
+h1{
+  margin:20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+
+  mat-card{
+    width: 250px;
+  }
+}

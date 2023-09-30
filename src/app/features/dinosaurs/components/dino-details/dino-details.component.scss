@@ -1,0 +1,14 @@
+mat-card{
+  max-width: 600px;
+  color: #FFF;
+  margin: 20px;
+  mat-card-content{
+    border-top: 1px solid #303030;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+:host{
+  display: flex;
+  justify-content: center;
+}

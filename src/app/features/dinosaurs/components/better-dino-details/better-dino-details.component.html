@@ -1,0 +1,60 @@
+<h1>
+  {{dino.name}}
+</h1>
+<div class="container">
+  <div class="left">
+    <mat-card>
+      <img mat-card-image [ngSrc]="dino.image" [height]="250" [width]="250" [alt]="'Photo of '+dino.name">
+    </mat-card>
+    <mat-card>
+      <mat-card-title>
+        <h2>Informations</h2>
+      </mat-card-title>
+      <mat-card-content>
+        <p>Height : {{dino.height}} m</p>
+        <p>Weight : {{dino.weight}} kg</p>
+        <p>Diet : {{dino.diet}}</p>
+        <p>Period : {{dino.period}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="right">
+    <mat-card>
+      <mat-card-title>
+        <h2>
+          Description:
+        </h2>
+      </mat-card-title>
+      <mat-card-content>
+        <p>{{dino.description}}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, delectus doloribus ea eligendi ipsa modi
+          optio possimus quam quas sit. Beatae deserunt dicta maiores soluta tenetur. Adipisci consectetur ea soluta!
+        </p>
+        <p>Ab aspernatur cupiditate enim esse ex maiores neque quas qui vitae voluptatem. Ad at commodi debitis enim
+          eum
+          facilis, fugiat harum hic nobis non repellendus sequi tempora ullam voluptate voluptates?
+        </p>
+        <p>Alias aut expedita quibusdam. Corporis distinctio eveniet, fugiat ipsum labore libero molestiae nesciunt
+          non
+          officiis ut! Aliquid aut autem doloribus enim eos in, libero nisi, quo sint tempore unde velit!
+        </p>
+        <p>Atque fugiat illum minima perferendis possimus sed similique suscipit voluptas voluptates, voluptatum!
+          Architecto commodi est inventore molestiae nihil officia officiis pariatur, reiciendis saepe sapiente. A
+          aliquam
+          fugit natus odit voluptas?
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, repellendus, rerum! Dolorum id nostrum
+          reiciendis voluptates? Consequuntur eum ipsa laboriosam modi necessitatibus neque perferendis quae quisquam
+          sequi tenetur ullam, unde?
+        </p>
+        <p>Consequatur consequuntur, esse eveniet explicabo quo sapiente velit! Dicta excepturi, in minus quibusdam
+          reprehenderit rerum veritatis! Asperiores debitis deserunt facere maiores nam perferendis provident quisquam,
+          quo ratione veniam! Laudantium, neque!
+        </p>
+        <p>Cupiditate dolor eius esse eum hic iste labore modi pariatur, placeat, qui sed, sit suscipit voluptatibus.
+          Eligendi itaque magnam nesciunt nisi nobis odio omnis quia, repellendus voluptate voluptates? Dolor, sit.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

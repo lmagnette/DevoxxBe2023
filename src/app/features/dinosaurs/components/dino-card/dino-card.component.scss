@@ -1,0 +1,16 @@
+mat-card{
+  max-width: 250px;
+  color: #fff;
+  height: 550px;
+  display:flex;
+  flex-direction: column;
+
+  mat-card-header {
+    flex-shrink: 0;
+  }
+  mat-card-content{
+    overflow: scroll;
+    flex-grow: 1;
+  }
+}
+
