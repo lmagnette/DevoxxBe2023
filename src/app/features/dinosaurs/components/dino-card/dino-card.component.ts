@@ -25,7 +25,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class DinoCardComponent {
 
-  @Input() dino!: Dinosaur;
+  @Input({required:true}) dino!: Dinosaur;
 
 
   constructor(private snackBar: MatSnackBar) {
