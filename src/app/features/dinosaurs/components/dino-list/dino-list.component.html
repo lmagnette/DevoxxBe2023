@@ -1,17 +1,32 @@
 <mat-card class="search">
-  <mat-card-content>
+  <mat-card-content class="search-content">
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Filter:</mat-label>
-        <input matInput placeholder="Ex. Tyranosaurus" name="filter" [ngModel]="searchTerm()" (ngModelChange)="updateTerm($event)">
+        <input matInput placeholder="Ex. Tyranosaurus" name="filter" [ngModel]="searchTerm()"
+               (ngModelChange)="updateTerm($event)">
       </mat-form-field>
     </form>
+
+      @if (filteredDinos().length > 0) {
+      <mat-chip class="found">There's {{filteredDinos().length}} Dinos</mat-chip>
+      }@else{
+      <mat-chip class="none">Dinos went instinct!</mat-chip>
+      }
   </mat-card-content>
 </mat-card>
+
 <div class="list">
-  <div class="column" *ngFor="let dino of filteredDinos()">
+  @for( dino of filteredDinos(); track dino.id){
+    <div class="column">
+        <app-dino-card [dino]="dino"></app-dino-card>
+    </div>
+  } @empty {
+  <p> No Dino's found </p>
+  }
+  <!---div class="column" *ngFor="let dino of filteredDinos()">
     <ng-container>
       <app-dino-card [dino]="dino"></app-dino-card>
     </ng-container>
-  </div>
+  </div-->
 </div>
