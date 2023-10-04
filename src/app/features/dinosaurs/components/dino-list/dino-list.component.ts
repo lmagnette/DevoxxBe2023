@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component( {
   selector: 'app-dino-list',
@@ -20,7 +21,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatChipsModule
   ],
   standalone: true
 } )

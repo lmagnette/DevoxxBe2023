@@ -15,6 +15,22 @@
   .mat-mdc-card-content {
     padding-bottom: 0 !important;
   }
+  .search-content{
+    display: flex;
+    flex-direction: row;
+    //space-between
+    justify-content: space-between;
+  }
+  mat-chip{
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+  .found{
+    background: #55977C;
+  }
+  .none{
+    background: #f44336;
+  }
 }
 
 .example-form {
