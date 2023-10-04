@@ -7,11 +7,10 @@
                (ngModelChange)="updateTerm($event)">
       </mat-form-field>
     </form>
-
       @if (filteredDinos().length > 0) {
-      <mat-chip class="found">There's {{filteredDinos().length}} Dinos</mat-chip>
+        <mat-chip class="found">There's {{filteredDinos().length}} Dinos</mat-chip>
       }@else{
-      <mat-chip class="none">Dinos went instinct!</mat-chip>
+        <mat-chip class="none">Dinos went instinct!</mat-chip>
       }
   </mat-card-content>
 </mat-card>
@@ -24,9 +23,4 @@
   } @empty {
   <p> No Dino's found </p>
   }
-  <!---div class="column" *ngFor="let dino of filteredDinos()">
-    <ng-container>
-      <app-dino-card [dino]="dino"></app-dino-card>
-    </ng-container>
-  </div-->
 </div>
