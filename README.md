@@ -1,5 +1,8 @@
 # DevoxxBe2023
 
+This project is a demo created for a talk at Devoxx Belgium 2023. It is a simple Angular application used to demonstrate the new feature that came with angular 14, 15, 16 and 17.
+You can find the slides of the talk [here](https://www.slideshare.net/secret/rOYhTBM1vzLLzL)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
