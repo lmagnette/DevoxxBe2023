@@ -9,7 +9,7 @@
     </form>
       @if (filteredDinos().length > 0) {
         <mat-chip class="found">There's {{filteredDinos().length}} Dinos</mat-chip>
-      }@else{
+      } @else {
         <mat-chip class="none">Dinos went instinct!</mat-chip>
       }
   </mat-card-content>
@@ -21,6 +21,6 @@
         <app-dino-card [dino]="dino"></app-dino-card>
     </div>
   } @empty {
-  <p> No Dino's found </p>
+    <p> No Dino's found </p>
   }
 </div>
